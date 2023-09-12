@@ -1,22 +1,27 @@
 #include "main.h"
 
 /**
- * _isalpha - Entry point for function
- * @c: function parameter
+ * print_sign - Entry point for function
+ * @n: function parameter
  *
- * Desc: a function that checks foe alphabetic letters
- * Return: 1 if parameter is a letter, otherwise 0
+ * Desc: a function that prints the sign of a number.
+ * Return: 1 if > 0, 0 if zero, otherwise -1
  */
-int _isalpha(int c)
+int print_sign(int n)
 {
-	if (c > 64 && c < 91)
+	if (n > 0)
 	{
+		_putchar('+');
 		return (1);
 	}
-	else if (c > 96 && c < 123)
+	else if (n == 0)
 	{
-		return (1);
+		_putchar(0 + '0');
+		return (0);
 	}
 	else
-		return (0);
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
