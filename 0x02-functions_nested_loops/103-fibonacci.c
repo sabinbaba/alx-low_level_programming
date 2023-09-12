@@ -1,31 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Desc: a program that prints the first 50 Fibonacci
- * numbers, starting with 1 and 2, followed by a new line
+ * main - Entry
+ * Desc: Fibonacci even sequence
  *
  * Return: Always 0
  */
 int main(void)
 {
-	int count;
+	long int sum = 0;
 	long int num1 = 0;
 	long int num2 = 1;
-	long int sum = 0;
+	long int total_sum = 0;
 
-	for (count = 0; count < 50; count++)
+	while (sum <= 4000000)
 	{
 		sum = num1 + num2;
 		num1 = num2;
 		num2 = sum;
-		printf("%lu", sum);
-		if (count < 49)
+
+		if (sum % 2 == 0)
 		{
-			printf(", ");
+			total_sum += sum;
 		}
 	}
-	printf("\n");
+	printf("%lu\n", total_sum);
 
 	return (0);
-}
+}}
